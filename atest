@@ -1,0 +1,14 @@
+import pandas as pd
+import random
+
+1st = ['robot' ] * 10
+1st += ['human'] * 10
+
+random. shuffle(1st)
+
+data = pd. DataFrame ({'whoAmI': 1st})
+
+one_hot=pd.get_dummies(data['whoAmI'])
+data_ one hot = pd. concat ([data, one_hot], axis=1)
+data_one_hot.drop(columns=['whoAmI'],inplace=True)
+print(data one hot.head())
